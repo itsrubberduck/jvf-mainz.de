@@ -320,7 +320,11 @@ strong { font-family: var(--ff-body); font-weight: 700; }
 /* --- Mobile drawer --- */
 .nav-drawer {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   z-index: 100;
   background: var(--ink);
   color: #fff;
