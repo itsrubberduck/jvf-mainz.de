@@ -62,6 +62,45 @@
     });
   }
 
+  /* ------------------------------------------------------------
+     Mobile-Drawer (Hauptnavigation)
+     ------------------------------------------------------------ */
+  var toggle = document.getElementById('nav-toggle');
+  var close  = document.getElementById('nav-close');
+  var drawer = document.getElementById('mobile-nav');
+
+  function openDrawer() {
+    if (!drawer || !toggle) return;
+    drawer.setAttribute('data-open', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.setAttribute('data-drawer-open', 'true');
+  }
+  function closeDrawer() {
+    if (!drawer || !toggle) return;
+    drawer.setAttribute('data-open', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.removeAttribute('data-drawer-open');
+  }
+
+  if (toggle) toggle.addEventListener('click', openDrawer);
+  if (close)  close.addEventListener('click', closeDrawer);
+
+  if (drawer) {
+    // Beim Klick auf einen Navi-Link Drawer schließen, damit der Smooth-Scroll sichtbar wird.
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeDrawer);
+    });
+  }
+
+  // ESC schließt den Drawer
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer && drawer.getAttribute('data-open') === 'true') {
+      closeDrawer();
+    }
+  });
+
   /* ---------------------------------------------------------
      Smooth-Scroll Offset für Sticky Header
      --------------------------------------------------------- */
