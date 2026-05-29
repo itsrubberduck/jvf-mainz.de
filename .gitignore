@@ -1,0 +1,65 @@
+# --- macOS -----------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows ---------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editor / IDE ----------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.history/
+
+# --- Vim / Emacs / Temp ----------------------------------------------
+*.swp
+*.swo
+*~
+.#*
+\#*\#
+
+# --- Office Lock-Files -----------------------------------------------
+~$*
+
+# --- Logs ------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Node (falls später Build-Tools dazukommen) ----------------------
+node_modules/
+.npm/
+.yarn/
+.pnp.*
+
+# --- Env -------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# --- Netlify ---------------------------------------------------------
+.netlify/
+
+# --- Claude / Tooling ------------------------------------------------
+.claude/
+
+# --- Lokale Build-Artefakte / Caches ---------------------------------
+dist/
+build/
+.cache/
+.tmp/
+
+# --- Sicherheitskopien / Originalmaterial ----------------------------
+# Originale liegen in /Users/domi/Downloads/JVF/ — Web-fertige
+# Versionen sind unter assets/ eingecheckt.
+*.orig
+*.bak
